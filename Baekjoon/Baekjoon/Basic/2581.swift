@@ -7,37 +7,30 @@
 
 import Foundation
 
-let M = Int(readLine()!)!
-let N = Int(readLine()!)!
+var number = 100000
+var arr = Array(0...number)
 
-var arr = [Int](repeating: 0, count: 10001)
+func solution() {
+    arr[1] = 0
 
-for i in 2...10000 {
-    arr[i] = i
-}
-
-for i in 1...10000 {
-    if arr[i] == 0 {
-        continue
-    }
-    
-    for i in 2...10000 {
+    for i in 2...number {
         if arr[i] == 0 {
             continue
         }
         
         var index = i * 2
-        
-        while index <= 10000 {
+        while index <= number {
             arr[index] = 0
-            
             index += i
         }
     }
 }
+solution()
+
+let M = Int(readLine()!)!
+let N = Int(readLine()!)!
 
 var total = 0
-
 for i in M...N {
     if arr[i] != 0 {
         total += arr[i]
@@ -51,8 +44,7 @@ if total == 0 {
     
     for i in M...N {
         if arr[i] != 0 {
-            var minValue = arr[i]
-            print(minValue)
+            print(arr[i])
             break
         }
     }

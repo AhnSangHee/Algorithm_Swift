@@ -8,26 +8,26 @@
 import Foundation
 
 let numbers = readLine()!.split(separator: " ").map { Int($0)! }
-
 let M = numbers[0]
 let N = numbers[1]
 
 var number = 1000000
-var arr = [Int](repeating: 0, count: number + 1)
+var arr = Array(0...number)
 
-for i in 2...number {
-    arr[i] = i
-}
+func solution() {
+    arr[1] = 0
 
-for i in 2...number {
-    if arr[i] == 0 {
-        continue
-    }
-    
-    for j in stride(from: i * 2, through: number, by: i) {
-        arr[j] = 0
+    for i in 2...number {
+        if arr[i] == 0 {
+            continue
+        }
+        
+        for j in stride(from: i * 2, through: number, by: i) {
+            arr[j] = 0
+        }
     }
 }
+solution()
 
 for i in M...N {
     if arr[i] != 0 {

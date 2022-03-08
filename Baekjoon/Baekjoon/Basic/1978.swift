@@ -7,41 +7,33 @@
 
 import Foundation
 
-let number = Int(readLine()!)!
-let numbers = readLine()!.split(separator: " ").map { Int($0)! }
+var number = 1000
+var arr = Array(0...1000)
 
-var arr = [Int](repeating: 0, count: 1001)
+func solution() {
+    arr[1] = 0
 
-for i in 2...1000 {
-    arr[i] = i
-}
-
-for i in 1...1000 {
-    if arr[i] == 0 {
-        continue
-    }
-    
-    for i in 2...1000 {
+    for i in 2...number {
         if arr[i] == 0 {
             continue
         }
         
         var index = i * 2
-        
-        while index <= 1000 {
+        while index <= number {
             arr[index] = 0
-            
             index += i
         }
     }
 }
+solution()
 
-var ans = 0
+let input = Int(readLine()!)!
+let numbers = readLine()!.split(separator: " ").map { Int($0)! }
 
-for i in 0..<numbers.count {
-    if arr[numbers[i]] != 0 {
-        ans += 1
+var answer = 0
+for num in numbers {
+    if arr[num] != 0 {
+        answer += 1
     }
 }
-
-print(ans)
+print(answer)

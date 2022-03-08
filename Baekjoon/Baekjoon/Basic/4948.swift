@@ -7,17 +7,22 @@
 
 import Foundation
 
-var arr = [Int](repeating: 0, count: 246913)
+var number = 246912
+var arr = Array(0...number)
+func solution() {
+    arr[1] = 0
 
-for i in 2...246912 {
-    arr[i] = i
-}
-
-for i in 2...246912 {
-    for j in stride(from: i * 2, through: 246912, by: i) {
-        arr[j] = 0
+    for i in 2...number {
+        if arr[i] == 0 {
+            continue
+        }
+        
+        for j in stride(from: i * 2, through: number, by: i) {
+            arr[j] = 0
+        }
     }
 }
+solution()
 
 while let input = Int(readLine()!), input != 0 {
     var count = 0
@@ -28,3 +33,4 @@ while let input = Int(readLine()!), input != 0 {
     }
     print(count)
 }
+

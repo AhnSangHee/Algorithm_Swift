@@ -1,4 +1,4 @@
-//  소수 구하기
+//  소인수분해
 //  11653.swift
 //  Baekjoon
 //
@@ -8,12 +8,11 @@
 import Foundation
 
 var num = Int(readLine()!)!
-
+var i = 2
 while num != 1 {
-    for i in 2...num {
-        while num % i == 0 { // 나누어떨어진다면 계속 나누기
-            print(i)
-            num /= i
-        }
+    while num % i == 0 {
+        print(i)
+        num /= i
     }
+    i += 1
 }
