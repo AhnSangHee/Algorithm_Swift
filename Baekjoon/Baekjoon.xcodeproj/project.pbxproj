@@ -115,6 +115,9 @@
 		D078A1AB27EC9ABE00927941 /* 2178.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2178.swift; sourceTree = "<group>"; };
 		D078A1AC27ECA6ED00927941 /* 1926.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1926.swift; sourceTree = "<group>"; };
 		D078A1AD27ECAC1900927941 /* 7576.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7576.swift; sourceTree = "<group>"; };
+		D078A1AE27ECD02300927941 /* 4179.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4179.swift; sourceTree = "<group>"; };
+		D078A1AF27ECE0CA00927941 /* 1697.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1697.swift; sourceTree = "<group>"; };
+		D078A1B827EE28F500927941 /* 11724.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 11724.swift; sourceTree = "<group>"; };
 		D0C295FA27CA72710021E11A /* 1158.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1158.swift; sourceTree = "<group>"; };
 		D0C2963427CBDF970021E11A /* 10828.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 10828.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +172,7 @@
 		5CD4C2972696C2200021D56E /* Baekjoon */ = {
 			isa = PBXGroup;
 			children = (
+				D078A1B027ECE95300927941 /* DFS */,
 				D05D06BF27EB4133003A7CC7 /* BFS */,
 				5C23DD3B2725E47300FF4325 /* DataStructure */,
 				5C7566C22711DAEC00AA6B91 /* BruteForce */,
@@ -276,8 +280,18 @@
 				D078A1AB27EC9ABE00927941 /* 2178.swift */,
 				D078A1AC27ECA6ED00927941 /* 1926.swift */,
 				D078A1AD27ECAC1900927941 /* 7576.swift */,
+				D078A1AE27ECD02300927941 /* 4179.swift */,
+				D078A1AF27ECE0CA00927941 /* 1697.swift */,
 			);
 			path = BFS;
+			sourceTree = "<group>";
+		};
+		D078A1B027ECE95300927941 /* DFS */ = {
+			isa = PBXGroup;
+			children = (
+				D078A1B827EE28F500927941 /* 11724.swift */,
+			);
+			path = DFS;
 			sourceTree = "<group>";
 		};
 		D0C2963327CBDF850021E11A /* Stack */ = {
